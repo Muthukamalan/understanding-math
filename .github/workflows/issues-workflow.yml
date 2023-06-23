@@ -10,4 +10,6 @@ jobs:
           echo "Welcome, Muthukamalan"
       
       - name: sent a mail
-        run: echo "Wake up Mail" | mail -s "issue came!!" "muthukamalan98@gmai.com"
+        run: |
+          apt install mailutils -y
+          echo "Wake up Mail" | mail -s "issue came!!" "muthukamalan98@gmai.com"
